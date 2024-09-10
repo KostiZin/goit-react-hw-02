@@ -1,9 +1,14 @@
 import "./App.css";
-
-import React from "react";
+import CustomButton from "./CustomButton";
 
 const App = () => {
-  return <div>Hello</div>;
+  let clicks = 0;
+
+  const handleClick = () => {
+    clicks = clicks + 1;
+  };
+
+  return <button onClick={handleClick}>Current: {clicks}</button>;
 };
 
 export default App;
